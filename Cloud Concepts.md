@@ -1,3 +1,19 @@
+# Advantages of Cloud Computing include:  (IMPORTANT)
+
+- Trade capital for variable expense: Instead of having to invest heavily in data centers and servers before you know how you’re going to use them, you can only pay when you consume computing resources, and only pay for how much you consume. By using AWS, infrastructure costs are converted to a pay-as-you-go model, where customers are charged for the resources that they consume, and those costs are incurred as operating costs instead of as capital expenditures.
+
+- Benefit from massive economies of scale: By using cloud computing, you can achieve a lower variable cost than you can get on your own. Because usage from hundreds of thousands of customers are aggregated in the cloud, providers such as Amazon Web Services can achieve higher economies of scale which translates into lower pay as you go prices.
+
+- Stop guessing capacity: Eliminate guessing on your infrastructure capacity needs. When you make a capacity decision prior to deploying an application, you often either end up sitting on expensive idle resources or dealing with limited capacity. With cloud computing, these problems go away. You can access as much or as little as you need, and scale up and down as required with only a few minutes notice.
+
+- Increase speed and agility: In a cloud computing environment, new IT resources are only ever a click away, which means you reduce the time it takes to make those resources available to your developers from weeks to just minutes. This results in a dramatic increase in agility for the organization, since the cost and time it takes to experiment and develop is significantly lower.
+
+- Stop spending money on running and maintaining data centers: Focus on projects that differentiate your business, not the infrastructure. Cloud computing lets you focus on your own customers, rather than on the heavy lifting of racking, stacking and powering servers.
+
+- Go global in minutes: Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide a lower latency and better experience for your customers simply and at minimal cost.
+
+## AWS Directory Service 
+Is the service that provides single sign-on (SSO) to applications and services on AWS. AWS Directory Service uses secure Windows trusts to enable users to sign in to the AWS Management Console and the AWS Command Line Interface (CLI) using their existing corporate Microsoft Active Directory credentials.
 
 ## Amazon Cognito
 Allows you to add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily.
@@ -13,8 +29,27 @@ Can simplify using AWS services in your applications with an API tailored to you
 
 # General 
 - A computer on which AWS runs one or more virtual machines is called a host machine, and each virtual machine is called a guest machine. AWS drives the concept of virtualization by allowing the physical host machine to operate multiple virtual machines as guests (for multiple customers) to help maximize the effective use of computing resources such as memory, network bandwidth and CPU cycles.
+
+
 - Amazon Web Services (AWS) allows customers to assign metadata to their AWS resources in the form of tags. Each tag is a simple label consisting of a customer-defined key and an optional value that can make it easier to manage, search for, and filter resources. Although there are no inherent types of tags, they enable customers to categorize resources by purpose, owner, environment, or other criteria. An effective tagging strategy will give you improved visibility and monitoring, help you create accurate chargeback/showback models, and get more granular and precise insights into usage and spend by applications and teams.
+
+
 - Data sovereignty is the concept that information which has been converted and stored in binary digital form is subject to the laws of the country in which it is located. Data sovereignty is a factor you should consider when choosing your AWS region
+
+
+- AWS Serverless Services include:
+
+**Compute**: AWS Lambda, AWS Fargate
+
+**Messaging**: Amazon SNS, Amazon SQS
+
+**Database**: Amazon DynamoDB, Amazon Aurora Serverless
+
+**Orchestration**: AWS Step Functions
+
+## A pilot light scenario 
+Is a disaster recover / business continuity scenario wherein a minimal amount of services are kept running in a failover location to enable the business to meet their Recovery Time Objective (RTO) and Recovery Point Objective (RPO) in the event of a disaster. By nature, a pilot light scenario will take some time to spin up and promote to production (as opposed to an active-active DR scenario) and will therefore not mitigate the per-minute losses that will be experienced by the company in the event of an outage.
+Additional information: Recovery time objective (RTO) and recovery point objective (RPO) are two key metrics to consider when developing a disaster recover (DR) plan. RTO represents how many hours it takes customers to return to a working state after a disaster. RPO, which is also expressed in hours, represents how much data customers could lose when a disaster happens. For example, an RPO of 1 hour means that customers could lose up to 1 hour’s worth of data when a disaster occurs.
 
 ## Infrastructure as a Service (IaaS)
 Contains the basic building blocks for Cloud IT and typically provide access to networking features, computers (virtual or on dedicated hardware), and data storage space. Infrastructure as a Service provides you with the highest level of flexibility and management control over your IT resources and is most similar to existing IT resources that many IT departments and developers are familiar with today.
@@ -153,11 +188,24 @@ Note: Anyone can report abuse of AWS resources, not just AWS customers.
 ## AWS Support Concierge Service
  AWS Support Concierge is available only for AWS Enterprise support subscribers and is dedicated only to help AWS customers with their billing and account inquiries.
 
+## AWS Professional Services organization
+Is a global team of experts that helps customers realize their desired business outcomes when using AWS.
+
 ## AWS Customer Service
 The AWS Customer Service team is at the forefront of this transformational technology assisting a global list of customers that are taking advantage of a growing set of services and features to run their mission-critical applications. The team helps AWS customers understand what Cloud Computing is all about, and whether it can be useful for their business needs.
 Can help AWS customers with their billing and account inquiries, and it is included in all AWS support plans (Basic, Developer, Business, and Enterprise). However, due to the fact that AWS Customer Service is not dedicated to specific types of inquiries, it is not as quick or as **efficient as the AWS Support Concierge**.
 
 "AWS Operations Support" is incorrect. AWS Operations Support is an Enterprise support program that provides operations assessments and analysis to identify gaps across the operations lifecycle, as well as recommendations based on best practices.
+
+## Operations Support
+Included with the Enterprise support plan, Operations Support provides consultative reviews of your AWS operations and advice for optimization. 
+
+## The AWS Support API 
+Provides programmatic access to AWS Support Center features to create, manage, and close support cases, and operationally manage Trusted Advisor check requests and status. AWS Support API is available only for AWS  customers who have a Business or Enterprise support plan.
+The service currently provides two different groups of operations:
+1- Support Case Management operations to manage the entire life cycle of AWS support cases, from creating a case to resolving it.
+2- Trusted Advisor operations to access the checks provided by AWS Trusted Advisor.
+
 ## AWS Application Discovery Service
 Helps enterprise customers plan migration projects by gathering information about their on-premises data centers.
 
@@ -187,6 +235,7 @@ Helps you migrate databases to AWS easily and securely. The source database rema
 ## Amazon DynamoDB
 Is a NoSQL database service.
 DynamoDB is serverless with no servers to provision, patch, or manage and no software to install, maintain, or operate. DynamoDB automatically scales tables up and down to adjust for capacity and maintain performance. Availability and fault tolerance are built in, eliminating the need to architect your applications for these capabilities.
+**DAX is a caching feature for use with Amazon DynamoDB**
 
 ## Amazon Neptune
 Is a graph database service, not a MySQL database service. Amazon Neptune is used to build and run applications that work with highly connected datasets, such as social networking, recommendation engines, and knowledge graphs.
@@ -232,6 +281,25 @@ Additional information:
 
 An IAM role is similar to an IAM user, in that it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS. However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone (or any service, application, ...etc) who needs it. Also, a role does not have standard long-term credentials such as a password or access keys associated with it. Instead, when you assume a role, it provides you with temporary security credentials for your role session. IAM roles are meant to be assumed by authorized entities, such as IAM users, applications, or an AWS service such as Amazon EC2.
 
+**IAM roles with temporary credentials are useful in the following situations:**
+
+**Applications running on Amazon EC2:** You can use an IAM role to manage temporary credentials for applications running on an EC2 instance and make AWS CLI or AWS API requests. This is more secure than storing access keys within the EC2 instance.
+
+**Federated user access:** Instead of creating an IAM user, you can use existing identities from AWS Directory Service, your enterprise user directory, or a web identity provider. These are known as federated users. AWS assigns a role to a federated user when access is requested through an identity provider.
+
+**AWS service access:** A service role is an IAM role that a service assumes to perform actions on your behalf. An IAM administrator can create, modify, and delete a service role from within IAM.
+
+## IAM policies
+Let you allow or deny access to AWS services (such as Amazon S3), individual AWS resources (such as a specific S3 bucket), or individual API actions (such as s3:CreateBucket). An IAM policy can be applied only to IAM users, groups, or roles, and it can never restrict the root identity of the AWS account (The AWS root account).
+
+## If you suspect that your account has been compromised, or if you have received a notification from AWS that the account has been compromised, perform the following tasks: 
+
+- Change your AWS root account password and the passwords of all IAM users. 
+- Delete or rotate all root and AWS Identity and Access Management (IAM) access keys.
+- Delete any potentially compromised IAM users.
+- Delete any resources on your account you didn’t create, such as EC2 instances and AMIs, EBS volumes and snapshots, and IAM users. 
+- Respond to any notifications you received from AWS Support through the AWS Support Center. 
+
 ## AWS WAF (Web Application Firewall)
 Helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. You can use AWS WAF to create custom rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that are designed for your specific application.
 
@@ -246,6 +314,22 @@ AWS customers use VPC Flow logs to troubleshoot connectivity and security issues
 
 ## Amazon Inspector
 Is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications for vulnerabilities or deviations from best practices. After performing an assessment, Amazon Inspector produces a detailed list of security findings prioritized by level of severity. These findings can be reviewed directly or as part of a detailed assessment report which is available via the Amazon Inspector console or API. To help get started quickly, Amazon Inspector includes a knowledge base of hundreds of rules mapped to common security best practices and vulnerability definitions. Examples of built-in rules include checking for remote root login being enabled, or vulnerable software versions installed. These rules are regularly updated by AWS security researchers.
+
+## Amazon GuardDuty
+Is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads.
+With the cloud, the collection and aggregation of account and network activities is simplified, but it can be time consuming for security teams to continuously analyze event log data for potential threats. GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as AWS CloudTrail, Amazon VPC Flow Logs, and DNS logs. With GuardDuty, you now have an intelligent and cost-effective option for continuous threat detection in the AWS Cloud. The service uses machine learning, anomaly detection, and integrated threat intelligence to identify and prioritize potential threats.
+
+## Amazon Detective 
+Is a security service that makes it easy to analyze, investigate, and quickly identify the root cause of potential security issues or suspicious activities.
+
+
+**How does Amazon Detective differ from Amazon GuardDuty?**
+
+Amazon GuardDuty is helpful in alerting you when something is wrong and pointing out where to go to fix it. But sometimes, there might be a security finding where you need to dig a lot deeper and analyze more information to isolate the root cause and take action.
+
+Amazon Detective simplifies this process by enabling you to easily investigate and quickly get to the root cause of a security finding. Amazon Detective analyzes trillions of events from multiple data sources such as Virtual Private Cloud (VPC) Flow Logs, AWS CloudTrail logs, and automatically creates a unified view of user and resource interactions over time, with all the context and details in one place to help you quickly analyze and get to the root cause of a security finding.
+
+For example, an Amazon GuardDuty finding, like an unusual Console Login API call, can be quickly investigated in Amazon Detective with details about the API call trends over time, and user login attempts on a geolocation map. These details enable you to quickly identify if you think it is legitimate or an indication of a compromised AWS resource.
 
 ##  AWS Macie
  A fully managed security service which helps protect your sensitive data in Amazon S3. Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data in Amazon S3. Amazon Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property, and provides you with dashboards and alerts that give visibility into how this data is being accessed or moved. The fully managed service continuously monitors data access activity for anomalies, and generates detailed alerts when it detects risk of unauthorized access or inadvertent data leaks. Today, Amazon Macie is available to protect data stored in Amazon S3, with support for additional AWS data stores coming later this year.
@@ -303,7 +387,7 @@ Provide a discount (up to 90%) off the On-Demand price. The Spot price is determ
          Spot Instances are a cost-effective choice if you can be flexible about when your applications run and if you don't mind if your applications get interrupted. For example, Spot Instances are well-suited for data analysis, batch jobs, background processing, and optional tasks. 
 
 ####  Dedicated instances
-Are used when you need your instances to be physically isolated at the host hardware level from instances that belong to other AWS accounts. Dedicated instances are significantly more expensive than Spot Instances
+Are used when you need your instances to be physically isolated at the host hardware level from instances that belong to other AWS accounts. Dedicated instances are significantly more expensive than Spot Instances.Dedicated Hosts provide you with EC2 instance capacity on physical servers dedicated to your use. You may need to migrate your applications to a dedicated host to use your eligible software licenses from vendors such as Microsoft and Oracle on Amazon EC2 so that you get the flexibility and cost-effectiveness of using your own licenses, but with the resiliency, simplicity, and elasticity of AWS. Amazon EC2 Dedicated Hosts can also help address corporate compliance requirements because they are dedicated only to a single customer.
 
 ####  Reserved instances
 Are recommended for Customers that can commit to using EC2 over a 1 or 3-year term to reduce their total computing costs. Even if the project will last for more than a year, the cost-benefit for acquiring Reserved Instances is not as great as the cost-benefit from using Spot Instances. The Spot option provides the largest discount (up to 90%).
@@ -382,6 +466,9 @@ Is the exabyte-scale data migration service that allows you to move very large d
 ## AWS Storage Gateway
 A hybrid cloud storage between on-premises environments and the AWS Cloud . It is the service that enables your on-premises applications to seamlessly use AWS cloud storage.
 
+## AWS Data Pipeline
+Is a web service that helps customers reliably process and move data between different AWS compute and storage services, as well as on-premises data sources.
+
 # Configuration Management
 
 ## AWS CloudFormation
@@ -405,6 +492,12 @@ Provides central governance and management across multiple AWS accounts and has 
 4) Consolidate billing across multiple AWS accounts.
 
 5) Configure AWS services across multiple accounts.
+
+#### AWS Service Control Policies (or AWS Organizations Policies) are a type of organization policy that you can use to manage permissions for all accounts in your organization. SCPs offer central control over the maximum available permissions for all member accounts in your organization. SCPs help you to ensure member accounts stay within your organization's access control guidelines. In SCPs, you can restrict which AWS services, resources, and individual API actions the users and roles in each member account can access. When AWS Organizations blocks access to a service, resource, or API action for a member account, a user or role in that account cannot access it. This block remains in effect even if an administrator of a member account explicitly grants such permissions in an IAM policy.
+
+##  Amazon Cloud Directory
+Is a cloud-native, highly scalable, high-performance directory service that provides web-based directories to make it easy for you to organize and manage all your application resources such as users, groups, locations, devices, and policies, and the rich relationships between them.
+
 ## AWS Systems Manager
 Gives you visibility and control of your infrastructure on AWS. Systems Manager provides a unified user interface so you can view operational data from multiple AWS services and allows you to automate operational tasks across your AWS resources.
 
@@ -423,15 +516,20 @@ Is a service that lets you easily provision, manage, and deploy public and priva
 ## AWS Secrets Manager
 Is a secrets management service that enables you to store, retrieve, rotate, audit, and monitor secrets centrally. AWS Secrets Manager allows you to manage secrets such as database credentials, on-premises resource credentials, SaaS application credentials, third-party API keys, and Secure Shell (SSH) keys.
 
-## AWS Global Accelerator and CloudFront
-Are two separate services that use the AWS global network and its edge locations around the world. CloudFront improves performance for both cacheable (e.g., images and videos) and dynamic content (e.g. dynamic site delivery). Global Accelerator is a good fit for specific use cases, such as gaming, IoT or Voice over IP.
-
 ##  Amazon Route 53
 Is a global service that provides highly available and scalable Domain Name System (DNS) services, domain name registration, and health-checking web services. It is designed to give developers and businesses an extremely reliable and cost effective way to route end users to Internet applications by translating names like example.com into the numeric IP addresses, such as 192.0.2.1, that computers use to connect to each other.
 Route 53 also simplifies the hybrid cloud by providing recursive DNS for your Amazon VPC and on-premises networks over **AWS Direct Connect or AWS VPN**.
 
 ## An internet gateway
 Is a VPC component that allows communication between your VPC and the internet.
+
+## AWS Outposts
+Is an AWS service that delivers the same AWS infrastructure, native AWS services, APIs, and tools to virtually any customer on-premises facility. With AWS Outposts, customers can run AWS services locally on their Outpost, including EC2, EBS, ECS, EKS, and RDS, and also have full access to services available in the Region.
+Customers can use AWS Outposts to securely store and process data that needs to remain on-premises or in countries where there is no AWS region. AWS Outposts is ideal for applications that have low latency or local data processing requirements, such as financial services, healthcare, etc.
+
+
+## AWS Global Accelerator and CloudFront
+Are two separate services that use the AWS global network and its edge locations around the world. CloudFront improves performance for both cacheable (e.g., images and videos) and dynamic content (e.g. dynamic site delivery). Global Accelerator is a good fit for specific use cases, such as gaming, IoT or Voice over IP.
 
 ## Amazon CloudFront
 Is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
@@ -459,12 +557,11 @@ Is a compute service that allows you to run hundreds of thousands of batch compu
 ## Aws CodePipeline
 Is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.
 
+## AWS CodeCommit
+Is a source code control service that hosts secure Git-based repositories. AWS CodeCommit is designed for software developers who need a secure, reliable, and scalable source control system to store and version their code.
+
 ## AWS CodeDeploy
 Is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.
-
-## AWS Outposts
-Is an AWS service that delivers the same AWS infrastructure, native AWS services, APIs, and tools to virtually any customer on-premises facility. With AWS Outposts, customers can run AWS services locally on their Outpost, including EC2, EBS, ECS, EKS, and RDS, and also have full access to services available in the Region.
-Customers can use AWS Outposts to securely store and process data that needs to remain on-premises or in countries where there is no AWS region. AWS Outposts is ideal for applications that have low latency or local data processing requirements, such as financial services, healthcare, etc.
 
 ## Amazon Lightsail
 Amazon Lightsail provides a low-cost Virtual Private Server (VPS) in the cloud.Lightsail plans include everything you need to jumpstart your project – virtual machines, containers, databases, CDN, load balancers, SSD-based storage, DNS management, etc. – for a low, predictable monthly price.
@@ -476,24 +573,45 @@ is a Natural Language Processing (NLP) service that uses machine learning to fin
 Is a serverless, machine learning-powered business intelligence (BI) service built for the cloud. QuickSight lets you easily create and publish interactive BI dashboards that include Machine Learning-powered insights. QuickSight dashboards can be accessed from any device, and seamlessly embedded into your applications, portals, and websites.
 Unlike traditional BI or data discovery solutions, getting started with Amazon QuickSight is simple and fast. When you log in, Amazon QuickSight seamlessly discovers your data sources in AWS services such as Amazon Redshift, Amazon RDS, Amazon Athena, and Amazon Simple Storage Service (Amazon S3). You can connect to any of the data sources discovered by Amazon QuickSight and get insights from this data in minutes. Amazon QuickSight supports rich data discovery and business analytics capabilities to help customers derive valuable insights from their data without worrying about provisioning or managing infrastructure.
 
+## Amazon Personalize
+Is a fully managed machine learning service that can be used to deliver highly customized recommendations to customers across industries such as retail, media and entertainment. Amazon Personalize enables developers to build applications with the same machine learning (ML) technology used by Amazon.com for real-time personalized recommendations. Amazon Personalize can be used to personalize the end-user experience over any digital channel. Examples include product recommendations for e-commerce, news articles and content recommendation for publishing, media and social networks, hotel recommendations for travel websites, and credit card recommendations for banks.
+
 ## AWS Cloud9 
 Is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don’t need to install files or configure your development machine to start new projects.
 
 ## WS Elastic Beanstalk 
 Is an application container on top  of Amazon Web Services. Elastic Beanstalk makes it easy for developers to quickly deploy and manage applications in the AWS Cloud. Developers simply upload their application code, and Elastic Beanstalk automatically handles the deployment details of capacity provisioning, load balancing, auto-scaling, and application health monitoring.
 
+## AWS Amplify 
+Is used for building secure and scalable web and mobile applications, not deploying applications.
+
 ## AWS Glue
 Is a fully-managed, Extract, Transform, and Load (ETL) service that automates the time-consuming steps of data preparation for analytics.
 Extract, Transform, and Load (ETL) is the process of extracting (collecting) data from various sources (from different databases for example), transform the data depending on business rules/needs (This step helps in preparing the data for analytics and decision making) and load the data into a destination database, often a data warehouse.
 
+##  Amazon Chime
+Is a communications service for online meetings.
+
+## Amazon Rekognition 
+Is a service that makes it easy to add image analysis to your applications. With Rekognition, you can detect objects, scenes, and faces in images. You can also search and compare faces. The Amazon Rekognition API enables you to quickly add sophisticated deep-learning-based visual search and image classification to your applications.
+
+##  Amazon Polly 
+Is a service that turns text into lifelike speech.
+
 ## Amazon Kinesis Video Streams
 Enables you to securely stream video from connected devices (IoT devices) to AWS for analytics, machine learning (ML), playback, and other processing. Kinesis Video Streams automatically provisions and elastically scales all the infrastructure needed to ingest streaming video data from millions of devices. It durably stores, encrypts, and indexes video data in your streams, and allows you to access your data through easy-to-use APIs.
+
+## Amazon EventBridge (also called Amazon CloudWatch Events)
+Amazon EventBridge is a serverless event bus service that  makes it easy for you to build event-driven application architectures. Amazon EventBridge helps you accelerate modernizing and re-orchestrating your architecture with decoupled services and applications. With EventBridge, you can speed up your organization’s development process by allowing teams to iterate on features without explicit dependencies between systems.
 
 ## Amazon Simple Notification Service (SNS)
 Is a fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications. Using Amazon SNS topics, your publisher systems can fan out messages to a large number of subscriber endpoints for parallel processing, including AWS Lambda functions, and HTTP/S webhooks. Additionally, SNS can be used to fan out notifications to end users using mobile push, SMS, and email.
 
 ## Amazon Simple Queue Service (SQS)
 Is a fully managed message queuing service that enables you to send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available. SQS lets you decouple application components so that they run independently, increasing the overall fault tolerance of the system. Multiple copies of every message are stored redundantly across multiple availability zones so that they are available whenever needed.
+
+## AWS Fargate 
+Is a compute engine for Amazon Elastic Container Service (ECS) that allows customers to run containers without having to manage servers or clusters.
 
 ##  Amazon SES (Amazon Simple Email Service) 
 Is a flexible, affordable, and highly-scalable email messaging platform for businesses and developers.
