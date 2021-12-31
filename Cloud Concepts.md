@@ -12,6 +12,8 @@
 
 - Go global in minutes: Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide a lower latency and better experience for your customers simply and at minimal cost.
 
+# Accessing AWS
+
 ## AWS Directory Service 
 Is the service that provides single sign-on (SSO) to applications and services on AWS. AWS Directory Service uses secure Windows trusts to enable users to sign in to the AWS Management Console and the AWS Command Line Interface (CLI) using their existing corporate Microsoft Active Directory credentials.
 
