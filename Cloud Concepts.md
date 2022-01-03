@@ -194,10 +194,34 @@ Available only to customers having an Enterprise Support subscription.
 
 ## AWS Professional Services organization
 Is a global team of experts that helps customers realize their desired business outcomes when using AWS.
+We work together with your team and your chosen member of the AWS Partner Network (APN) to execute your enterprise cloud computing initiatives.
+Our team provides assistance through a collection of offerings which help you achieve specific outcomes related to enterprise cloud adoption. We also deliver focused guidance through our global specialty practices, which cover a variety of solutions, technologies, and industries.
 
 ## AWS Customer Service
 The AWS Customer Service team is at the forefront of this transformational technology assisting a global list of customers that are taking advantage of a growing set of services and features to run their mission-critical applications. The team helps AWS customers understand what Cloud Computing is all about, and whether it can be useful for their business needs.
 Can help AWS customers with their billing and account inquiries, and it is included in all AWS support plans (Basic, Developer, Business, and Enterprise). However, due to the fact that AWS Customer Service is not dedicated to specific types of inquiries, it is not as quick or as **efficient as the AWS Support Concierge**.
+
+## AWS Support
+AWS Support offers five support plans
+
+#### Basic
+Free of cost.Customer service for account and billing questions only. Will have access to AWS Community Forums
+
+#### Developer Support
+We recommend AWS Developer Support if you are testing or doing early development on AWS and want the ability to get technical support during business hours as well as general architectural guidance as you build and test.
+**Business hours email access to Cloud Support engineers. You can have one primary contact that can open an unlimited amount of cases. Response times for general guidance is less than 24 business hours* and system impaired is less than 12 business hours*.**
+
+#### Business Support
+We recommend AWS Business Support if you are running production workloads on AWS and want 24x7 access to technical support from engineers, access to Health API, and contextual architectural guidance for your use-cases.
+**24x7 access to Cloud Support Engineers via phone, chat, and email. You can have an unlimited number of contacts that can open an unlimited amount of cases. Response times for general guidance is less than 24 hours, system impaired is less than 12 hours, production system impaired is less than 4 hours, and production system down is less than an hour.**
+
+#### Enterprise On-Ramp
+We recommend Enterprise On-Ramp if you have production/business critical workloads in AWS and want 24x7 access to technical support from engineers, access to Health API, consultative architectural guidance, and a pool of Technical Account Managers (TAMs) to coordinate access to AWS subject matter experts.
+**24x7 access to Cloud Support Engineers via phone, chat, and email. You can have an unlimited number of contacts that can open an unlimited amount of cases. Response times for general guidance is less than 24 hours, system impaired is less than 12 hours, production system impaired is less than 4 hours, production system down is less than an hour, and _business critical system down is less than 30 minutes_.**
+
+#### Enterprise Support
+We recommend Enterprise Support for 24x7 technical support from high-quality engineers, tools and technology to automatically manage health of your environment, consultative architectural guidance, and a designated Technical Account Manager (TAM) to coordinate access to proactive / preventative programs and AWS subject matter experts.
+**24x7 access to Cloud Support Engineers via phone, chat, and email. You can have an unlimited number of contacts that can open an unlimited amount of cases. Response times for general guidance is less than 24 hours, system impaired is less than 12 hours, production system impaired is less than 4 hours, production system down is less than an hour, and _business critical system down is less than 15 minutes_.**
 
 ## Operations Support
 Included with the Enterprise support plan, Operations Support provides consultative reviews of your AWS operations and advice for optimization as well as recommendations based on best practices.
