@@ -153,8 +153,6 @@ The 5 Pillars of the AWS Well-Architected Framework:
 
 - Cost Optimization: The cost optimization pillar includes the ability to avoid or eliminate unneeded cost or sub-optimal resources.
 
-
-
 ## AWS Trusted Advisor 
 Offers a rich set of best practice checks and recommendations across five categories: cost optimization; security; fault tolerance; performance; and service limits(Service limits, also referred to as Service quotas, are the maximum number of service resources or operations that apply to an AWS account. Understanding your service limits (and how close you are to them) is an important part of managing your AWS deployments – continuous monitoring allows you to request limit increases or shut down resources before the limit is reached. One of the easiest ways to do this is via AWS Trusted Advisor’s Service Limit Dashboard). Like your customized cloud security expert, AWS Trusted Advisor analyzes your AWS environment and provides security recommendations to protect your AWS environment. The service improves the security of your applications by closing gaps, examining permissions, and enabling various AWS security features.
 The core security checks include: (Important)
@@ -170,10 +168,6 @@ Checks buckets in Amazon Simple Storage Service (Amazon S3) that have open acces
 - 3- MFA on Root Account.
 
 Checks the root account and warns if multi-factor authentication (MFA) is not enabled. For increased security, AWS recommends that you protect your account by using MFA, which requires a user to enter a unique authentication code from their MFA hardware or virtual device when interacting with the AWS console and associated websites.
-
-## Amazon Connect 
-Cloud-based contact center service that helps businesses to deliver customer service at a low cost.
-Available only to customers having an Enterprise Support subscription.
 
 ## AWS Knowledge Center 
 Is available for everyone free of charge. The AWS Knowledge Center helps answer the questions most frequently asked by AWS customers. The AWS Knowledge Center does not provide guidance on a case-by-case basis.
@@ -197,6 +191,10 @@ Can assist you when AWS resources are being used to engage in the following type
 - Distributing malware: You have evidence that AWS resources are being used to distribute software that was knowingly created to compromise or cause harm to computers or machines on which it is installed.
 Note: Anyone can report abuse of AWS resources, not just AWS customers.
 
+## Amazon Connect 
+Cloud-based contact center service that helps businesses to deliver customer service at a low cost.
+Available only to customers having an Enterprise Support subscription.
+
 ## AWS Support Concierge Service
  AWS Support Concierge is available only for AWS Enterprise support subscribers and is dedicated only to help AWS customers with their billing and account inquiries.
 
@@ -207,10 +205,8 @@ Is a global team of experts that helps customers realize their desired business 
 The AWS Customer Service team is at the forefront of this transformational technology assisting a global list of customers that are taking advantage of a growing set of services and features to run their mission-critical applications. The team helps AWS customers understand what Cloud Computing is all about, and whether it can be useful for their business needs.
 Can help AWS customers with their billing and account inquiries, and it is included in all AWS support plans (Basic, Developer, Business, and Enterprise). However, due to the fact that AWS Customer Service is not dedicated to specific types of inquiries, it is not as quick or as **efficient as the AWS Support Concierge**.
 
-"AWS Operations Support" is incorrect. AWS Operations Support is an Enterprise support program that provides operations assessments and analysis to identify gaps across the operations lifecycle, as well as recommendations based on best practices.
-
 ## Operations Support
-Included with the Enterprise support plan, Operations Support provides consultative reviews of your AWS operations and advice for optimization. 
+Included with the Enterprise support plan, Operations Support provides consultative reviews of your AWS operations and advice for optimization as well as recommendations based on best practices.
 
 ## The AWS Support API 
 Provides programmatic access to AWS Support Center features to create, manage, and close support cases, and operationally manage Trusted Advisor check requests and status. AWS Support API is available only for AWS  customers who have a Business or Enterprise support plan.
