@@ -83,12 +83,6 @@ Scaling vertically takes place through an increase in the specifications of an i
 
 Vertical-scaling is often limited to the capacity constraints of a single machine, scaling beyond that capacity often involves downtime and comes with an upper limit. With horizontal-scaling it is often easier to scale dynamically by adding more machines in parallel. Hence, in most cases, horizontal-scaling is recommended over vertical-scaling.
 
-## AWS Elastic Load Balancer (ELB) 
-Is a service that distributes the incoming application traffic to multiple targets that you define.
-- Application Load Balancer (Http and https) More intteligent
-- Network Load Balancer(TCP/TLS) More faster
-- Classic Load Balancer Not used now.
-- Gateway Load Balancer
 
 ## The difference between AWS-managed services and customer-managed services:
 - For AWS-managed services such as Amazon RDS and Amazon DynamoDB, AWS is responsible for performing all the operations needed to keep the service running.
@@ -524,17 +518,50 @@ Is a service that lets you easily provision, manage, and deploy public and priva
 ## AWS Secrets Manager
 Is a secrets management service that enables you to store, retrieve, rotate, audit, and monitor secrets centrally. AWS Secrets Manager allows you to manage secrets such as database credentials, on-premises resource credentials, SaaS application credentials, third-party API keys, and Secure Shell (SSH) keys.
 
+# Networking
+
+## AWS Elastic Load Balancer (ELB) 
+Is a service that distributes the incoming application traffic to multiple targets that you define.
+- Application Load Balancer (Http and https) More intteligent
+- Network Load Balancer(TCP/TLS) More faster
+- Classic Load Balancer Not used now.
+- Gateway Load Balancer
+
 ##  Amazon Route 53
 Is a global service that provides highly available and scalable Domain Name System (DNS) services, domain name registration, and health-checking web services. It is designed to give developers and businesses an extremely reliable and cost effective way to route end users to Internet applications by translating names like example.com into the numeric IP addresses, such as 192.0.2.1, that computers use to connect to each other.
 Route 53 also simplifies the hybrid cloud by providing recursive DNS for your Amazon VPC and on-premises networks over **AWS Direct Connect or AWS VPN**.
 
-## An internet gateway
-Is a VPC component that allows communication between your VPC and the internet.
+## Internet gateway
+An Internet Gateway (IGW) is a logical connection between an Amazon VPC and the Internet. It is not a physical device. Only one can be associated with each VPC.
+**IGW allows resources within your public subnet to access the internet, and the internet to access said resources.**
+
+## NAT Gateway
+It is a fully-managed service that allows resources in a private subnet to access the internet (think yum updates, external database connections, wget calls, OS patch, etc).
+
+## AWS Direct Connect 
+Provides a private connection between a customer's on-premises data center and the AWS cloud without using the public internet.
+
+## AWS PrivateLink 
+Is a networking feature provided by Amazon Web Services (AWS) that eases and secures connectivity between Amazon Virtual Private Clouds (VPCs), other Amazon cloud services and on-premises applications.
+**Direct connect is only between aws and on permises, but PrivateLink is between 2 VPCs or other Amazon services or on-permises application.**
+
+## VPC endpoint
+Enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink. Amazon VPC instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon VPC and a service does not leave the Amazon network.
+
+**Interface endpoint**
+Help you to securely connect to AWS services EXCEPT FOR Amazon S3 and DynamoDB
+Powered by PrivateLink (keeps network traffic within AWS network)
+Needs a elastic network interface (ENI) (entry point for traffic)
+
+**Gateway endpoint**
+Targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list, used for traffic destined to Amazon DynamoDB or Amazon SimpleStorage Service (Amazon S3). Gateway endpoints do not enable AWS PrivateLink.
+
+## VPC Peering
+Helps you to connect VPCs belonging to same or different AWS accounts irrespective of the region of the VPCs. This allows private communication between the connected VPCs.
 
 ## AWS Outposts
 Is an AWS service that delivers the same AWS infrastructure, native AWS services, APIs, and tools to virtually any customer on-premises facility. With AWS Outposts, customers can run AWS services locally on their Outpost, including EC2, EBS, ECS, EKS, and RDS, and also have full access to services available in the Region.
 Customers can use AWS Outposts to securely store and process data that needs to remain on-premises or in countries where there is no AWS region. AWS Outposts is ideal for applications that have low latency or local data processing requirements, such as financial services, healthcare, etc.
-
 
 ## AWS Global Accelerator and CloudFront
 Are two separate services that use the AWS global network and its edge locations around the world. CloudFront improves performance for both cacheable (e.g., images and videos) and dynamic content (e.g. dynamic site delivery). Global Accelerator is a good fit for specific use cases, such as gaming, IoT or Voice over IP.
@@ -564,6 +591,11 @@ Is a compute service that allows you to run hundreds of thousands of batch compu
 
 ## Aws CodePipeline
 Is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.
+AWS CodePipeline automatically builds, tests and launches an application each time the code is changed; a developer uses a graphic user interface to model workflow configurations for the release process within the pipeline.
+
+## AWS Code Build
+AWS CodeBuild is a managed cloud service that enables an IT developer to automate and manage server builds for applications that reside in the Amazon Web Services (AWS) public cloud.
+A developer uses the service to compile, test and deploy source code as build projects through the AWS Command Line Interface (AWS CLI).
 
 ## AWS CodeCommit
 Is a source code control service that hosts secure Git-based repositories. AWS CodeCommit is designed for software developers who need a secure, reliable, and scalable source control system to store and version their code.
@@ -620,6 +652,9 @@ Is a fully managed message queuing service that enables you to send, store, and 
 
 ## AWS Fargate 
 Is a compute engine for Amazon Elastic Container Service (ECS) that allows customers to run containers without having to manage servers or clusters.
+
+## AWS Step Functions 
+Is a cloud service from Amazon Web Services that enables a developer to manage and visualize the components of distributed, multi-component applications.(Orchestration)
 
 ##  Amazon SES (Amazon Simple Email Service) 
 Is a flexible, affordable, and highly-scalable email messaging platform for businesses and developers.
