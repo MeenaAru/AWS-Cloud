@@ -679,6 +679,10 @@ Is a compute engine for Amazon Elastic Container Service (ECS) that allows custo
 
 ## AWS Step Functions 
 Is a cloud service from Amazon Web Services that enables a developer to manage and visualize the components of distributed, multi-component applications.(Orchestration)
+Is a **serverless workflow orchestration** service for modern applications.
+
+## AWS Simple Workflow Service SWF
+SWF is a **workflow orchestration service**.
 
 ##  Amazon SES (Amazon Simple Email Service) 
 Is a flexible, affordable, and highly-scalable email messaging platform for businesses and developers.
