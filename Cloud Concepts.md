@@ -565,6 +565,9 @@ An Internet Gateway (IGW) is a logical connection between an Amazon VPC and the 
 ## NAT Gateway
 It is a fully-managed service that allows resources in a private subnet to access the internet (think yum updates, external database connections, wget calls, OS patch, etc).
 
+## AWS VPN
+AWS Direct Connection is a network service that uses a private network, bypasses the Internet and offers security when transferring data from local infrastructure to AVC. A **VPN** uses an encrypted network within a public network (Internet) and is a cheaper option, but in its case the security of the business data may be compromised, as the data may become publicly available.
+
 ## AWS Direct Connect 
 Provides a private connection between a customer's on-premises data center and the AWS cloud without using the public internet.
 
