@@ -18,7 +18,7 @@
 Is the service that provides single sign-on (SSO) to applications and services on AWS. AWS Directory Service uses secure Windows trusts to enable users to sign in to the AWS Management Console and the AWS Command Line Interface (CLI) using their existing corporate Microsoft Active Directory credentials.
 
 ## Amazon Cognito
-Allows you to add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily.
+Amazon Cognito provides authentication, authorization, and user management for your web and mobile apps. Your users can sign in directly with a user name and password, or through a third party such as Facebook, Amazon, Google or Apple.
 
 ## AWS Management Console
 The AWS Management Console allows you to access and manage Amazon Web Services through a simple and intuitive web-based user interface. You can only access the AWS management console if you have a valid user name and password.
