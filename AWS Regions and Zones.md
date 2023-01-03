@@ -5,10 +5,10 @@ Geographically isolated locations, that have atleast a minimum of 3 isolated and
 Actual locations that have one or more data centers with redundant power, networking and connectivity inside a region.
 
 # Local Zones
-AWS Local Zones place compute, storage, database, and other **select AWS services** closer to end-users to easily run highly-demanding applications that require single-digit millisecond latencies to your end-users. Provides a high-bandwidth, secure connection between local workloads and those running in the AWS Region, through which the users can access all the other available services.
+AWS Local Zones are extensions of AZs, that place compute, storage, database, and other **select AWS services** closer to end-users to easily run highly-demanding applications that require single-digit millisecond latencies to your end-users. Provides a high-bandwidth, secure connection between local workloads and those running in the AWS Region, through which the users can access all the other available services.
 
 # AWS Wavelength Zones
-Acccessing application through mobile, will be more faster when the compute and storage AWS services are available within the mobile network providers 5G network. This is made possible through AWS wavelenght zones.
+This also an extension of AZs. Acccessing application through mobile, will be more faster when the compute and storage AWS services are available within the mobile network providers 5G network. This is made possible through AWS wavelenght zones.
 
 # AWS Outposts
 Brings AWS services to on-premise data centre. This is very helpfull when the company has compliance related requirements
