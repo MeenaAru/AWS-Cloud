@@ -1,0 +1,10 @@
+** Instance Storage ** - Ephemeral in nature. One to one relationship between ec2 and instance storage.
+** EBS (Elastic Block Storage) ** - External storage which can grow. 1 EBS volume can be mounted only on 1 EC2 instance and both should be in the same AZ.
+                              1 ec2 can have more than 1 EBS volumes
+** EFS (Elastic File Storage) ** - Any number of EC2 instances can be linked to one EFS for both read and write. Application has to handle concurrency. It automatically scales. 
+** S3 (Simple Storage Service) ** - Previous storages where block storage. S3 is object storage.Can use lambda to access the S3. 
+                                    Contents available in S3 are distributed by CDN and cloud front uses it to make the contents are available near the user.
+                                    Event can be triggered based on the availability of the S3 Objects
+                                    Can use CLI to load or dowoad or process objects using shell scripts.
+                                    Objects can be made accessible to only the required users.
+                                    Can replicate the data in another region.
