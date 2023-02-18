@@ -11,6 +11,7 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 **Solution:**
 
 ubuntu@ip-172-31-91-205:~$ sudo usermod -aG docker ubuntu
+
 ubuntu@ip-172-31-91-205:~$ docker images
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json": dial unix /var/run/docker.sock: connect: permission denied
 
