@@ -4,9 +4,11 @@ so to add the ubuntu user to the docker group, we need to give the below command
 **Error:**
 ubuntu@ip-172-31-91-205:~$ docker ps -a
 
+
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?all=1": dial unix /var/run/docker.sock: connect: permission denied
 
 ubuntu@ip-172-31-91-205:~$ **sudo** docker images
+
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 
 **Solution:**
