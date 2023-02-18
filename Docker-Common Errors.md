@@ -19,6 +19,8 @@ ubuntu@ip-172-31-91-205:~$ docker images
 
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json": dial unix /var/run/docker.sock: connect: permission denied
 
-ubuntu@ip-172-31-91-205:~$ sudo docker images
+Exit and login back again.
+
+ubuntu@ip-172-31-91-205:~$ docker images
 
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
